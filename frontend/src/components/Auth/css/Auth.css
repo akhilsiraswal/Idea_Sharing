@@ -1,0 +1,106 @@
+.auth {
+  width: 1000px;
+  height: 700px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.auth .image-section {
+  width: 50%;
+  height: 100%;
+  background-image: url(../../../assets/images/AuthBackground.png);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3rem;
+}
+
+.auth .image-section .heading {
+  font-weight: bold;
+  font-size: 70px;
+  text-align: center;
+}
+
+.auth .form-section {
+  padding: 2rem;
+  width: 50%;
+}
+
+.auth .form-section .head {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.auth .form-section .sub-head {
+  opacity: 0.5;
+  font-size: 1rem;
+  margin: 1rem 0;
+  width: 70%;
+}
+
+.auth .form-section form {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.auth .form-section form .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.auth .form-section form .field label {
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.auth .form-section form .field input {
+  padding: 0.8rem;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: transparent;
+  margin: 1rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.auth .form-section form button {
+  padding: 0.8rem;
+  margin: 2rem 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.2rem;
+  background-color: #d27afc;
+  width: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.auth .form-section form button:hover {
+  background-color: #c562f3;
+}
+/*# sourceMappingURL=Auth.css.map */

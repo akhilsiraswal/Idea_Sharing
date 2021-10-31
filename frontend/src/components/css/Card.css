@@ -1,0 +1,60 @@
+.Card {
+  width: 700px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 1rem;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.Card header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 1rem;
+}
+
+.Card header .user_profile {
+  width: 30px;
+  margin-right: 20px;
+}
+
+.Card .idea-section {
+  padding: 2rem 0.3rem;
+  font-size: 1.2rem;
+}
+
+.Card footer .btn {
+  background-color: transparent;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.Card footer .btn img {
+  margin-right: 10px;
+}
+
+.Card footer .btn:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  cursor: pointer;
+}
+/*# sourceMappingURL=Card.css.map */
