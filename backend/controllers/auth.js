@@ -4,6 +4,20 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const expressJwt = require("express-jwt");
 
+// exports.getUserById = (req, res, next, id) => {
+//   console.log("inside getuserById");
+//   User.findById(id).then((err, user) => {
+//     if (err || !user) {
+//       res.status(500).json({
+//         error: err || "User Not Found",
+//       });
+//     }
+
+//     req.user = user;
+//   });
+//   next();
+// };
+
 exports.signin = (req, res) => {
   console.log(req.body);
   User.find({ email: req.body.email }).then((user, err) => {

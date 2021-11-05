@@ -6,12 +6,16 @@ const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const authRoutes = require("./routes/auth");
+const ideaRoutes = require("./routes/idea");
 //! middlewares..
 
 app.use(cors());
 app.use(cookieParser());
 app.use(express.json({ limit: "20mb" }));
+
+//! Routes...
 app.use("/api", authRoutes);
+app.use("/api", ideaRoutes);
 
 //! SERVER...
 app.listen(process.env.PORT, () => {

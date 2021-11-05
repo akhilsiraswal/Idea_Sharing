@@ -1,4 +1,5 @@
-const Idea = require("../models/ideas");
+// const idea = require("../models/idea");
+const Idea = require("../models/idea");
 const User = require("../models/user");
 
 exports.findAllIdeas = (req, res) => {
@@ -52,18 +53,38 @@ exports.getIdeaById = (req, res, id, next) => {
   });
 };
 
-exports.getUserById = (req, res, id, next) => {
-  User.findById({ _id: id }).then((err, user) => {
-    if (err || !user) {
-      res.status(404).json({
-        error: err || "Idea Not found",
+exports.createIdea = (req, res) => {
+  console.log("inside createIdea");
+
+  const idea = new Idea(req.body);
+  // console.log(req.user);
+
+  const userId = req.user._id;
+  idea.save().then((idea, err) => {
+    if (err || !idea) {
+      res.status(500).json({
+        error: err || "Idea Not saved",
       });
     }
-    res.user = user;
-    next();
+    var ideas = [];
+
+    ideas.push(idea);
+
+    User.findOneAndUpdate(
+      { _id: userId },
+      { $push: { ideas: ideas } },
+      { new: true },
+      (err, updatedUser) => {
+        if (err || !updatedUser) {
+          res.status(500).json({
+            error: err || "Idea Not SAVed..",
+          });
+        }
+      }
+    );
+
+    return res.status(200).json({
+      idea,
+    });
   });
 };
-
-exports.createIdea = (req,res) =>{
-  
-}
